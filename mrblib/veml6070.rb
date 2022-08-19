@@ -17,8 +17,8 @@ class VEML6070
   end
 
   def get_uv
-    data_h = @i2c.read_integer(VEML6070::ADDRESS_H,1)
-    data_l = @i2c.read_integer(VEML6070::ADDRESS_L,1)
+    data_h = @i2c.readfrom(VEML6070::ADDRESS_H,1)
+    data_l = @i2c.readfrom(VEML6070::ADDRESS_L,1)
     @uv = (data_h[0] << 8) | data_l[0] 
   end
 
