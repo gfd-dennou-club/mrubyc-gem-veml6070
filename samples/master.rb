@@ -1,5 +1,5 @@
 #I2C 初期化
-i2c = I2C.new(22, 21)
+i2c = I2C.new()
 # VEML6070の初期化
 veml = VEML6070.new(i2c)
 veml.init
